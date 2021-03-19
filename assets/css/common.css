@@ -1,0 +1,80 @@
+body { margin:0; padding:0; box-sizing: border-box; }
+
+ul { margin:0; padding:0; }
+li { list-style: none; margin:0; padding:8px; }
+p { margin:0; padding:0; }
+
+
+select { border-radius:3px; }
+select, input, textarea { display: block; width: 100%; padding: 0.5rem 0.75rem; font-size: 1em; line-height: 1.25 !important; color: #6c757d;
+	background-color: #fff; background-image: none; border-radius: 3px; border: 1px solid #cfcfcf;
+	-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; }
+select:disabled { background:#f0f0f0; cursor:not-allowed; }
+input[type="text"]:disabled { background:#f0f0f0; cursor:not-allowed; }
+
+input[type="checkbox"] { position:absolute; left:-30000%; }
+input[type="checkbox"] + label { position:relative; display:inline-block; }
+input[type="checkbox"] + label:before { content:""; position:relative; display:inline-block; width:25px; height:25px; background:#fff; border:1px solid #bab9b9; border-radius:3px; transition:all 0.3s;}
+input[type="checkbox"]:checked + label:before { background:#F79C9A; border-color:#F79C9A; }
+/* input[type="checkbox"] + label:after { content:""; position:absolute; left:0px; width:25px; height:25px; background:url('../../images/common/checked.png') no-repeat center; background-size:0px auto; transition:all 0.3s;} */
+input[type="checkbox"]:checked + label:after { background-size:13px auto; }
+
+table thead { font-weight:600; }
+/* table tbody tr td { vertical-align:middle; } */
+table tbody tr td.center { text-align:center; }
+table tbody tr td.right { text-align:right; }
+.row_select { color:#fff!important; background: #34495e !important; /* #3f51b5!important;*/ }
+.panel-body { margin:1.5em 2em; font-size:14px; background:#fff; border:1px solid #cfcfcf; border-radius:7px; overflow:auto; box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.01), 0 6px 20px 0 rgba(0, 0, 0, 0.01); }
+/* header nav { float:right; width:50%; margin:0 20px 30px 0px; text-align: right; border: 0px solid #b2b2b2; } */
+#mask { display:none; position:absolute; left:0; top:0; z-index:1; width:100%; height:100vh; opacity:0.7; background-color:#000; }
+/***************************************************************************************
+Button : purple #7540ee / green #2ECC71 / yellow #f9c600 / red #ff3b30 / blue #5082f8 
+***************************************************************************************/
+button { display:inline-block; padding: 6px 14px; font-size:1em; font-weight:600; letter-spacing:1px; text-decoration: none; text-align: center; color: inherit; background-color: inherit; border:none; border-style:solid; border-width:2px; border-radius:3px; vertical-align: middle; white-space: nowrap; }
+button:disabled { opacity:0.3; cursor:not-allowed; }
+.btn_list { color:#fff; background:#2ECC71; border-color:#2ECC71;}
+.btn_list:hover { color:#2ecc71; background:#e6ffcd; }
+.btn_save { color:#fff; background:#f9c600; border-color:#f9c600;}
+.btn_save:hover { color:#ffa009; background:#ffecb3; }
+.btn_del { color:#fff; background:#ff3b30; border-color:#ff3b30;}
+.btn_del:hover { color:#ff392e; background:#ffd7b3; }
+.btn_add { color:#fff; background:#7540ee; border-color:#7540ee;} 
+.btn_add:hover { color:#5d1eeb; background:#ece5fc; }
+.btn_blue { color:#fff; background:#5082f8; border-color:#5082f8;}
+.btn_blue:hover { color:#5d1eeb; background:#ece5fc; }
+.btn_darkblue { color:#fff; background:#34495e; border-color:#34495e;}
+.btn_darkblue:hover { color:#34495e; background:#accdee; }
+.btn_black { color:#fff; background:#000; border-color:#000;}
+.btn_black:hover { color:#5d1eeb; background:#ece5fc; }
+.btn_white { color:#000; background:#fff; border:1px solid #cfcfcf;}
+.btn_white:hover { color:#000; background:#cfcfcf; }
+.btn_gray { color:#fff; background:#a8a8a8; border-color:#a8a8a8;}
+.btn_gray:hover { color:#fff; background:#cfcfcf; }
+.btn_darkgray { color:#fff; background:#616161; border:1px solid #525252;}
+.btn_darkgray:hover { color:#fff; background:#333; border-color:#000; }
+.btn_blackgray { color:#fff; background:#303030; border-color:#303030;}
+.btn_blackgray:hover { color:#5d1eeb; background:#ece5fc; } 
+
+.button-bottom { position: absolute; right:15px; bottom:5px; padding:0;}
+.button-bottom > button { width:133px; padding:12px 16px; }
+/****
+FONT
+****/
+.font_green { color:#2ECC71 !important; }
+.font_yellow { color:#f9c600 !important; }
+.font_red { color:#ff3b30 !important; }
+.font_blue { color:#5082f8 !important; }
+.font_blackgray { color:#303030 !important; }
+/****
+Dim-title
+****/
+.dim_pos_title { color:#fff; background:#5082f8; padding:5px 20px; }
+.title_green { color:#fff; background:#2ECC71; padding:5px 20px; }
+.title_yellow { color:#fff; background:#f9c600; padding:5px 20px; }
+.title_green { color:#fff; background:#ff3b30; padding:5px 20px; }
+.title_purple { color:#fff; background:#7540ee; padding:5px 20px; } 
+.title_blue { color:#fff; background:#5082f8; padding:5px 20px; }
+.title_black { color:#fff; background:#000; padding:5px 20px; }
+.title_blackgray { color:#fff; background:#303030; padding:5px 20px; }

@@ -1,0 +1,23 @@
+{
+  "name": "vue-storage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nuxt",
+    "lint": "eslint --ext .js,.vue ."
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.13.1",
+    "axios": "^0.21.1",
+    "nuxt": "^2.15.3",
+    "vue": "^2.6.12"
+  },
+  "devDependencies": {
+    "eslint": "^7.22.0",
+    "eslint-plugin-vue": "^7.0.0-beta.4"
+  },
+  "author": "",
+  "license": "ISC"
+}
