@@ -1,12 +1,17 @@
 <template>
-  <div>
-    물건 새로 등록
-  </div>
+  <section>
+    <stuff-form></stuff-form>
+  </section>
 </template>
 
 <script>
-export default {
+import StuffForm from '~/components/StuffForm';
 
+export default {
+  layout: 'stuff',
+  components: {
+    StuffForm,
+  }
 }
 </script>
 

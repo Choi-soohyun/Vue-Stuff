@@ -1,12 +1,20 @@
-body { margin:0; padding:0; box-sizing: border-box; }
+@font-face { font-family: 'Noto100'; src: url(~/assets/common/fonts/Noto_Sans_KR/NotoSansKR-Thin.otf); }
+@font-face { font-family: 'Noto200'; src: url(~/assets/common/fonts/Noto_Sans_KR/NotoSansKR-Light.otf); }
+@font-face { font-family: 'Noto300'; src: url(~/assets/common/fonts/Noto_Sans_KR/NotoSansKR-Regular.otf); }
+@font-face { font-family: 'Noto400'; src: url(~/assets/common/fonts/Noto_Sans_KR/NotoSansKR-Medium.otf); }
+@font-face { font-family: 'Noto500'; src: url(~/assets/common/fonts/Noto_Sans_KR/NotoSansKR-Bold.otf); }
+@font-face { font-family: 'Noto600'; src: url(~/assets/common/fonts/Noto_Sans_KR/NotoSansKR-Black.otf); }
+
+* { box-sizing: border-box; font-family: 'Noto300',sans-serif; }
+body { margin:0; padding:0; }
 
 ul { margin:0; padding:0; }
 li { list-style: none; margin:0; padding:8px; }
 p { margin:0; padding:0; }
-
+a { text-decoration: none; color:inherit; }
 
 select { border-radius:3px; }
-select, input, textarea { display: block; width: 100%; padding: 0.5rem 0.75rem; font-size: 1em; line-height: 1.25 !important; color: #6c757d;
+select, input, textarea { display: block; width: 100%; padding: 6px 8px; line-height: 1.25 !important; color: #6c757d;
 	background-color: #fff; background-image: none; border-radius: 3px; border: 1px solid #cfcfcf;
 	-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
 	-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
