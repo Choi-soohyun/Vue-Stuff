@@ -1,68 +1,72 @@
 <template>
-  <!-- 
-    Q) new / edit 두 링크가 해당 파일을 import한다.
-       new, edit 둘 다 어찌하였든 입력 또는 보여지는 항목이 동일해서 
-       방법을 생각하다가 다음과 같이 시도해봤다.
-  -->
-  <section v-if="editStuff">
-    <v-form ref="form" v-model="valid" @submit.prevent="stuffEvent(getOneStuff)">
-      <v-text-field
-        v-model="getOneStuff.title"
-        label="음식 이름"
-        type="text"
-      />
-      <v-text-field
-        v-model="getOneStuff.place"
-        label="저장소"
-        type="text"
-      />
-      <v-text-field
-        v-model="getOneStuff.buyDate"
-        label="구매일자"
-        type="date" 
-      />
-      <v-text-field
-        v-model="getOneStuff.limitDate"
-        label="유통기한"
-        type="date" 
-      />
-      <v-text-field
-        v-model="getOneStuff.leftover"
-        label="개수"
-        type="text"
-      />
-      <v-btn type="submit" :disabled="!valid">등록</v-btn>
-    </v-form>
-  </section>
-  <section v-else>
-    <v-form ref="form" v-model="valid" @submit.prevent="stuffEvent(stuffOne)">
-      <v-text-field
-        v-model="stuffOne.title"
-        label="음식 이름"
-        type="text"
-      />
-      <v-text-field
-        v-model="stuffOne.place"
-        label="저장소"
-        type="text"
-      />
-      <v-text-field
-        v-model="stuffOne.buyDate"
-        label="구매일자"
-        type="date" 
-      />
-      <v-text-field
-        v-model="stuffOne.limitDate"
-        label="유통기한"
-        type="date" 
-      />
-      <v-text-field
-        v-model="stuffOne.leftover"
-        label="개수"
-        type="text"
-      />
-      <v-btn type="submit" :disabled="!valid">등록</v-btn>
-    </v-form>
+  <section class="stuff-form">
+    <section v-if="editStuff">
+      <h2>수정</h2>
+      <v-form ref="form" v-model="valid" @submit.prevent="stuffEvent(getOneStuff)">
+        <v-text-field
+          v-model="getOneStuff.title"
+          label="음식 이름"
+          type="text"
+        />
+        <v-text-field
+          v-model="getOneStuff.place"
+          label="저장소"
+          type="text"
+        />
+        <v-text-field
+          v-model="getOneStuff.buyDate"
+          label="구매일자"
+          type="date" 
+        />
+        <v-text-field
+          v-model="getOneStuff.limitDate"
+          label="유통기한"
+          type="date"
+        />
+        <v-text-field
+          v-model="getOneStuff.leftover"
+          label="개수"
+          type="text"
+        />
+        <v-btn type="submit" :disabled="!valid">수정</v-btn>
+      </v-form>
+    </section>
+    <section v-else>
+      <h2>신규</h2>
+      <v-form ref="form" v-model="valid" @submit.prevent="stuffEvent(stuffOne)">
+        <v-text-field
+          v-model="stuffOne.title"
+          label="음식 이름"
+          type="text"
+          required
+        />
+        <v-text-field
+          v-model="stuffOne.place"
+          label="저장소"
+          type="text"
+          required
+        />
+        <v-text-field
+          v-model="stuffOne.buyDate"
+          label="구매일자"
+          type="date" 
+          required
+        />
+        <v-text-field
+          v-model="stuffOne.limitDate"
+          label="유통기한"
+          type="date" 
+          required
+        />
+        <v-text-field
+          v-model="stuffOne.leftover"
+          label="개수"
+          type="number"
+          required
+        />
+        <v-btn type="submit" :disabled="!valid">등록</v-btn>
+      </v-form>
+    </section>
   </section>
 </template>
 
@@ -70,8 +74,9 @@
 export default {  
   data() {
     return {
-      valid: false,      
+      valid: false,
       stuffOne: {
+        id: 0,
         title: '',
         place: '',
         buyDate: new Date().toISOString().substr(0, 10),
@@ -90,6 +95,7 @@ export default {
   },
   computed: {
     getOneStuff() {
+      this.stuffOne.id = this.editStuff.id;
       this.stuffOne.title = this.editStuff.title;
       this.stuffOne.place = this.editStuff.place;
       this.stuffOne.buyDate = this.editStuff.buyDate;
@@ -102,6 +108,8 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+h2 { margin-bottom:20px; }
+.stuff-form { padding:15px 20px; }
 
 </style>

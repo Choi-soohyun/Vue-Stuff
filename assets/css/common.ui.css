@@ -3,7 +3,7 @@
 
 #__layout > section.contents { /* padding:10px 15px; */ height:100%; overflow: auto; }
 
-#__layout > section > header { display:flex; justify-content: space-between; align-items: center; position: relative; padding:8px 15px; }
+#__layout > section > header { display:flex; justify-content: space-between; align-items: center; position: relative; height:48px; padding:8px 15px; }
 #__layout > section > header .logo { font-family: 'Noto600';}
 #__layout > section > header .logo figure { }
 #__layout > section > header .logo figure img { width:100%; }

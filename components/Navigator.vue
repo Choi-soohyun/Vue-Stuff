@@ -16,7 +16,7 @@
 
 <style scoped>
   .nav.active { display: block;; }
-  .nav { display:none; position:absolute; top:100%; left:0; width: 100%;  }
+  .nav { display:none; position:absolute; top:100%; left:0; width: 100%; }
   .nav ul { position: absolute; top:0; left:0; z-index:99; width: 100%; padding:0px 0px 10px; background: #fff;}
   .nav ul li { padding:5px ​15px; }
 

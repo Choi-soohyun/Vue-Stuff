@@ -21,8 +21,9 @@ export default {
     },
   },
   methods: {
-    editorStuff(data) {
-      this.$store.dispatch('stuff/actionEdit', data);
+    async editorStuff(data) {
+      await this.$store.dispatch('stuff/actionEdit', data);        
+      this.$router.push({ path : '/' })
     }
   }
 }
