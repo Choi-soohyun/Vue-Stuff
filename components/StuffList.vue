@@ -16,15 +16,17 @@
 					<button class="del">삭제</button>
 				</div>
 			</li> -->
-			<li v-for="stuff in stuffs" :key="stuff.id">
+			<li v-for="stuff in stuffs" :key="stuff.id">				
 				<div class="left">
-					<header>{{ stuff.name }}</header>
-					<div class="sub">
-						<span class="place">{{ stuff.place }}</span>
-						<span class="buy-date">{{ stuff.buyDate }}</span>
-						<span class="limit-date">{{ stuff.limitDate }}</span>
-						<span class="leftover">{{ stuff.leftover }}</span>
-					</div>
+					<nuxt-link :to="'/stuff/'+stuff.id">
+						<header>{{ stuff.title }}</header>
+						<div class="sub">
+							<span class="place">{{ stuff.place }}</span>
+							<span class="buy-date">{{ stuff.buyDate }}</span>
+							<span class="limit-date">{{ stuff.limitDate }}</span>
+							<span class="leftover">{{ stuff.leftover }}</span>
+						</div>
+					</nuxt-link>
 				</div>
 				<div class="right">
 					<template v-if="stuff.leftover > 0">

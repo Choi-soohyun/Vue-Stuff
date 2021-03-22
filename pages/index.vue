@@ -19,7 +19,8 @@ export default {
   methods: {
     eat(id) {
       this.$store.dispatch('stuff/actionEat', { id });
-    }
+    },
+
   }
 }
 </script>

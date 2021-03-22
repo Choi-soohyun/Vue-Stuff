@@ -4,7 +4,6 @@
     <ul>
       <li><nuxt-link to="/">물건 리스트</nuxt-link></li>
       <li><nuxt-link to="/stuff/new">물건 등록</nuxt-link></li>
-      <li><nuxt-link :to="'/stuff/'+'1'">물건 수정</nuxt-link></li>
     </ul>
   </section> 
 </template>

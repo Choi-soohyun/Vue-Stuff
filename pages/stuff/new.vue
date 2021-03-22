@@ -1,6 +1,6 @@
 <template>
   <section>
-    <stuff-form></stuff-form>
+    <stuff-form :stuffEvent="registerStuff"></stuff-form>
   </section>
 </template>
 
@@ -11,6 +11,11 @@ export default {
   layout: 'stuff',
   components: {
     StuffForm,
+  },
+  methods: {
+    registerStuff(data) {
+      this.$store.dispatch('stuff/actionRegister', data);
+    }
   }
 }
 </script>
