@@ -17,5 +17,8 @@ export default {
     '~/assets/common/fonts/fontawesome-5.15.2-web/all.css',
     '~/assets/css/common.css',
     '~/assets/css/common.ui.css',
-  ]
+  ],
+  modules: [
+    '@nuxtjs/vuetify',
+  ],
 }
